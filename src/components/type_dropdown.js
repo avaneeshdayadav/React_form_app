@@ -4,10 +4,10 @@ const TypeDropdown = (props) => {
 
   const [selectedType, setType] = useState("String");
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(selectedType);
     props.iconFlag(selectedType);
-  },[selectedType]);
+  }, [selectedType]);
 
   return (
     <>
@@ -22,24 +22,24 @@ const TypeDropdown = (props) => {
         </button>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item active" href="#" value={selectedType} onClick={(evt)=>{setType("String")}}>
+            <button className="dropdown-item active" value={selectedType} onClick={(evt) => { setType("String") }}>
               String
-            </a>
+            </button>
           </li>
           <li>
-            <a className="dropdown-item" href="#" value={selectedType} onClick={(evt)=>{setType("Number")}}>
+            <button className="dropdown-item" value={selectedType} onClick={(evt) => { setType("Number") }}>
               Number
-            </a>
+            </button>
           </li>
           <li>
-            <a className="dropdown-item" href="#" value={selectedType} onClick={(evt)=>{setType("Boolean")}}>
+            <button className="dropdown-item" value={selectedType} onClick={(evt) => { setType("Boolean") }}>
               Boolean
-            </a>
+            </button>
           </li>
           <li>
-            <a className="dropdown-item" href="#" value={selectedType} onClick={(evt)=>{setType("Object")}}>
+            <button className="dropdown-item" value={selectedType} onClick={(evt) => { setType("Object") }}>
               Object
-            </a>
+            </button>
           </li>
         </ul>
       </div>

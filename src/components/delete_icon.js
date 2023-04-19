@@ -1,11 +1,11 @@
 import React from "react";
 const DeleteIcon = (props) => {
 
-  function initializeDel(){
-    const updItems = props.items.filter((id)=>{return id != props.baseInpId});
+  function initializeDel() {
+    const updItems = props.items.filter((id) => { return id !== props.baseInpId });
     props.onDelete(updItems);
   }
-  
+
   return (
     <>
       <div>
@@ -18,7 +18,7 @@ const DeleteIcon = (props) => {
           className="bi bi-trash"
           viewBox="0 0 16 16"
           onClick={(e) => {
-            console.log("delete icon clicked "+e)
+            console.log("delete icon clicked " + e)
             initializeDel();
           }}
         >

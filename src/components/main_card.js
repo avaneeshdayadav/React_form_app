@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BaseInput from "./base_input";
 
 const MainCard = (props) => {
   const [items, setItem] = useState([]);
-  const [count, setCount] = useState(0);
 
   function setItemUtil() {
     const uniqueId = generateId();
@@ -27,7 +26,7 @@ const MainCard = (props) => {
       <div className="card w-66 mb-3">
         <div className="card-body">
           <div className="row">
-            <div className="cart-title col-9" style={{ textAlign: "center"}}>
+            <div className="cart-title col-9" style={{ textAlign: "center" }}>
               <h5>Field Name And Type</h5>
             </div>
             <div className="col-3" style={{ textAlign: "right" }}>
@@ -64,7 +63,7 @@ const MainCard = (props) => {
                             items={items}
                             id={eachItem}
                             onDelete={deleteBaseInp}
-                            index={index+1}
+                            index={index + 1}
                           />
                         </div>
                       </div>
